@@ -21,7 +21,7 @@ get_header(); ?>
 				while ( have_posts() ) : the_post();
 					get_template_part( 'content', 'single' );
 				endwhile;
-			
+				
 			else : ?>
 				
 				<article id="post-0" class="post no-results not-found">
@@ -37,6 +37,10 @@ get_header(); ?>
 				
 			<?php endif; ?>
 			
+			<nav id="nav-single">
+				<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
+				<span class="nav-previous"><?php posts_nav_link( ' <em>or</em> ', __( '<span class="meta-nav">&larr; Read newer posts</span>', 'electricself' ), __( '<span class="meta-nav">Read older posts &rarr;</span>', 'electricself' ) ); ?></span>
+			</nav><!-- #nav-single -->
 		</div><!-- #primary .content -->
 		
 <?php get_sidebar(); ?>

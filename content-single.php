@@ -27,10 +27,8 @@
 			remove_filter( 'the_content', 'sharing_display', 19 );
 			remove_filter( 'the_excerpt', 'sharing_display', 19 );
 			
-			if ()
-			
+			if ( has_post_thumbnail() ) the_post_thumbnail( 'frontpage-feature' );
 			the_content();
-			
 			wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) );
 		?>
 	</div><!-- .entry-content -->
