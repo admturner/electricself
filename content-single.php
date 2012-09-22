@@ -26,10 +26,13 @@
 			 */
 			remove_filter( 'the_content', 'sharing_display', 19 );
 			remove_filter( 'the_excerpt', 'sharing_display', 19 );
+			
+			if ()
+			
+			the_content();
+			
+			wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) );
 		?>
-		
-		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	
 	<div class="entry-meta twocolumn alignleft last comment-count">
