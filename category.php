@@ -28,7 +28,27 @@ get_header(); ?>
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php the_excerpt(); ?>
+					<header class="entry-header">
+						<?php if ( 'post' == get_post_type() ) : ?>
+							<div class="entry-meta">
+								<h6><?php es_header_entry_meta(); ?></h6>
+							</div><!-- .entry-meta -->
+						<?php endif; ?>
+						<h1 class="entry-title"><?php es_the_title(); ?></h1>
+					</header><!-- .entry-header -->
+					
+					<div class="entry-content">
+						<?php the_excerpt(); ?>
+					</div><!-- .entry-content -->
+					
+					<div class="entry-meta twocolumn alignleft last comment-count">
+						<?php es_comments_number(); ?>
+						<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
+					</div>
+					
+					<footer class="footer-meta entry-meta">
+						<?php es_footer_entry_meta(); ?>
+					</footer><!-- .entry-meta -->
 				<?php endwhile; ?>
 
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>
