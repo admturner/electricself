@@ -39,7 +39,7 @@ get_header(); ?>
 			
 			<nav id="nav-single">
 				<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
-				<span class="nav-previous"><?php posts_nav_link( ' <em>or</em> ', __( '<span class="meta-nav">&larr; Read newer posts</span>', 'electricself' ), __( '<span class="meta-nav">Read older posts &rarr;</span>', 'electricself' ) ); ?></span>
+				<span class="nav-previousnext"><?php posts_nav_link( ' ', __( '<span class="newer-posts-link threecolumn alignleft meta-nav">&larr; More recently on adamturner.org</span>', 'electricself' ), __( '<span class="older-posts-link threecolumn alignright meta-nav">Previously on adamturner.org &rarr;</span>', 'electricself' ) ); ?></span>
 			</nav><!-- #nav-single -->
 		</div><!-- #primary .content -->
 		

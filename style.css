@@ -230,6 +230,8 @@ Layout >> target ÷ context = result
 #colophon .cat-item a:link,
 #colophon .cat-item a:visited {
 	font-size: .7857em;
+		-webkit-transition: 0.2s background linear; -moz-transition: 0.1s background linear; -ms-transition: 0.1s background linear; -o-transition: 0.1s background linear;
+	transition: 0.1s background linear;
 	}
 #access li a:hover,
 #access li a:focus,
@@ -419,13 +421,32 @@ hr {
 	top: 0;
 	}
 
+.nav-previousnext span {
+	text-align: center;
+	border: 1px solid #ddd;
+	background: #eee;
+	background: rgba(255, 255, 255, .6);
+		-moz-border-radius: 3px; -webkit-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;
+	border-radius: 3px;
+	margin: .75em 0;
+		-moz-transition: 0.2s background linear; -webkit-transition: 0.2s background linear; -ms-transition: 0.2s background linear; -o-transition: 0.2s background linear;
+	transition: 0.2s background linear;
+}
+
+/* yeah, some browsers won't get it, but who cares? */
+.nav-previousnext span:hover,
+.nav-previousnext span:active,
+.nav-previousnext span:focus {
+	background: #eee;
+	border-color: #bbb;
+	}
+
 /* 
 Links
 -------------------------------------- */
 a:link, a:visited {
 	color: #f76307; text-decoration: none;
-	-moz-transition: 0.2s color linear;
-	-webkit-transition: 0.2s color linear;
+		-moz-transition: 0.2s color linear; -webkit-transition: 0.2s color linear; -ms-transition: 0.2s color linear; -o-transition: 0.2s color linear;
 	transition: 0.2s color linear;
 }
 a:hover, a:focus, a:active {
