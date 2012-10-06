@@ -461,7 +461,7 @@ a:hover, a:focus, a:active {
 /* 
 Utility >> target ÷ context = result
 -------------------------------------- */
-.assistive-text, .comment-form-comment-more {
+.assistive-text, .comment-form-comment-more, img#wpstats {
 	position: absolute; left: -9999px !important;
 }
 
